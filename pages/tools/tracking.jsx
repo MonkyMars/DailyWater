@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from '/styles/Water.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export default function Tracking() {
     const [trackingVisible, setTrackingVisible] = useState(false);
@@ -102,6 +103,9 @@ export default function Tracking() {
     
     return (
         <>
+        <Head>
+          <title>Daily Water | Tracking</title>
+        </Head>
             <nav className={styles.Nav}>
                 <h1><Link href={'/'}>Daily Water</Link></h1>
                 <h2>Tracker</h2>

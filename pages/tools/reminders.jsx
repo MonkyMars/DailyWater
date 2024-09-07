@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from '/styles/Water.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import Head from 'next/head';
 export default function Reminders() {
   const [waterVisible, setWaterVisible] = useState(false);
   const [reminders, setReminders] = useState([]);
@@ -97,6 +97,9 @@ export default function Reminders() {
 
   return (
     <>
+    <Head>
+      <title>Daily Water | Reminders</title>
+    </Head>
       <nav className={styles.Nav}>
         <h1><Link href={'/'}>Daily Water</Link></h1>
         <h2>Reminders</h2>
